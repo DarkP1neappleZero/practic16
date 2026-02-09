@@ -1,0 +1,10 @@
+input_string = input()
+
+words_list = input_string.split()
+
+unique_words = set(words_list)
+
+print(f"Количество: {len(unique_words)}")
+
+sorted_words = sorted(unique_words)
+print(f"Слова: {" " .join(sorted_words)}")
