@@ -1,0 +1,15 @@
+allowed_input = input()
+
+allowed_set = set(allowed_input.split())
+
+incoming_input = input()
+
+incoming_list = incoming_input.split()
+
+for id_str in incoming_list:
+    if id_str in allowed_set:
+        print("ОК")
+    else:
+        print("ADDED")
+
+        allowed_set.add(id_str)
