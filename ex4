@@ -1,0 +1,14 @@
+cia_input = input()
+mi6_input = input()
+kgb_input = input()
+
+cia_set = set(cia_input.split())
+mi6_set = set(mi6_input.split())
+kgb_set = set(kgb_input.split())
+
+double_agents = (cia_set & mi6_set) - kgb_set
+
+sorted_agents = sorted(double_agents, reverse=True)
+
+for agent in sorted_agents:
+    print(agent)
