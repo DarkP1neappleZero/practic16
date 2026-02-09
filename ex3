@@ -1,0 +1,15 @@
+server_a_input = input()
+
+files_a = set(server_a_input.split())
+
+server_b_input = input()
+
+files_b = set(server_b_input.split())
+
+common_files = files_a & files_b
+
+lost_files = files_a - files_b
+
+print("Общие:", ' '.join(sorted(common_files)))
+
+print("Потерянные:", ' '.join(sorted(lost_files)))
