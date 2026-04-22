@@ -1,0 +1,18 @@
+dept1 = input("Первый: ")
+dept2 = input("Второй: ")
+dept3 = input("Третий: ")
+
+set1 = set(dept1.split())
+set2 = set(dept2.split())
+set3 = set(dept3.split())
+
+all_ids = set(str(i) for i in range(11))
+
+present = set1 | set2 | set3
+
+ghosts = all_ids - present
+
+sorted_ghosts = sorted(ghosts, key=int)
+
+for g in sorted_ghosts:
+    print(g)
