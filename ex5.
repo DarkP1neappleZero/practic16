@@ -1,0 +1,20 @@
+log1 = input("Первый: ")
+log2 = input("Второй: ")
+log3 = input("Третий: ")
+
+set1 = set(log1.split())
+set2 = set(log2.split())
+set3 = set(log3.split())
+
+# Адреса, которые есть во всех трёх
+in_all = set1 & set2 & set3
+
+# Адреса, которые встречаются не более чем в двух логах
+# (все адреса минус те, что есть везде)
+result = (set1 | set2 | set3) - in_all
+
+# Вывод в порядке возрастания
+sorted_result = sorted(result)
+
+for ip in sorted_result:
+    print(ip)
