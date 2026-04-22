@@ -1,20 +1,27 @@
 log1 = input("Первый: ")
-log2 = input("Второй: ")
-log3 = input("Третий: ")
-
-set1 = set(log1.split())
-set2 = set(log2.split())
-set3 = set(log3.split())
-
-# Адреса, которые есть во всех трёх
-in_all = set1 & set2 & set3
+log2 = input("
 
 # Адреса, которые встречаются не более чем в двух логах
 # (все адреса минус те, что есть везде)
-result = (set1 | set2 | set3) - in_all
+dept1 = input("Первый: ")
+dept2 = input("Второй: ")
+dept3 = input("Третий: ")
 
-# Вывод в порядке возрастания
-sorted_result = sorted(result)
+set1 = set(dept1.split())
+set2 = set(dept2.split())
+set3 = set(dept3.split())
 
-for ip in sorted_result:
-    print(ip)
+# Все ID от 0 до 10
+all_ids = set(str(i) for i in range(11))
+
+# ID, которые есть хотя бы в одном отделе
+present = set1 | set2 | set3
+
+# Призраки — кто не пришёл ни в один отдел
+ghosts = all_ids - present
+
+# Вывод по возрастанию
+sorted_ghosts = sorted(ghosts, key=int)
+
+for g in sorted_ghosts:
+    print(g)
