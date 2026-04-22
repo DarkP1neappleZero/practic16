@@ -1,1 +1,16 @@
+log1 = input("Первый: ")
+log2 = input("Второй: ")
+log3 = input("Третий: ")
 
+set1 = set(log1.split())
+set2 = set(log2.split())
+set3 = set(log3.split())
+
+in_all = set1 & set2 & set3
+
+result = (set1 | set2 | set3) - in_all
+
+sorted_result = sorted(result)
+
+for ip in sorted_result:
+    print(ip)
