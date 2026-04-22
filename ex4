@@ -1,6 +1,6 @@
-cia_input = input()
-mi6_input = input()
-kgb_input = input()
+cia_input = input("Первый: ")
+mi6_input = input("Второй: ")
+kgb_input = input("Третий: ")
 
 cia_set = set(cia_input.split())
 mi6_set = set(mi6_input.split())
